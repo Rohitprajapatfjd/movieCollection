@@ -15,19 +15,19 @@ function DetailsPage() {
   const { data: similarData } = fetchData(parameter + "/similar")
   const { data: recommendationData } = fetchData(parameter + "/recommendations")
   const { data: videosData } = fetchData(parameter + "/videos")
-  console.log(videosData)
+  console.log()
   const Duration = (Number(data?.runtime) / 60).toFixed(2).split(".");
   const [display, setdisplay] = useState(false)
   return (
     <div className='py-16 text-neutral-200 '>
         {
-          display && (
+          display && videosData && (
             <div className='flex justify-center items-center relative'>
-            <div className='w-4/6 h-[40vh]  lg:h-[75vh] absolute overflow-hidden top-44 z-40'>
-              <p onClick={()=>setdisplay(false)} className=' absolute top-0 right-2 py-1 px-1 cursor-pointer text-sm hover:scale-105 text-white'>X</p>
+            <div className='w-5/6 md:w-4/6 h-[40vh]  lg:h-[75vh] absolute overflow-hidden top-44 z-40'>
+              <p onClick={()=>setdisplay(false)} className=' absolute -top-1 right-0  px-1 cursor-pointer text-md hover:rotate-180 transition-all text-white'>X</p>
               <iframe
                 className='w-full h-full'
-                src={`https://www.youtube.com/watch?v=`}
+                src={`https://www.youtube.com/embed/${videosData[0].key}`}
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'         
               ></iframe>
             </div>
