@@ -139,7 +139,7 @@ const Header = () => {
                   Tv Shows
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/about"
                   className={({ isActive }) =>
@@ -150,7 +150,7 @@ const Header = () => {
                 >
                   About
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

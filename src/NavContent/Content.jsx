@@ -14,10 +14,6 @@ const Content = [
     {label: 'Movies',
         href: '/movie',
         icon: <BiSolidMoviePlay />
-    },
-    {label: 'About',
-        href: '/about',
-        icon: <RiInformation2Fill />
     }
 ]
 

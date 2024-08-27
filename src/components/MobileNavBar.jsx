@@ -5,7 +5,7 @@ function MobileNavBar() {
   return (
     <section className='md:hidden bg-black/80 bg-opacity-500 z-50 bottom-0 fixed w-full h-12'>
       
-      <div className=' flex justify-between items-center h-full'>
+      <div className=' flex justify-around  items-center h-full'>
                  {Content.map((item,index)=>(
                     <NavLink 
                       to={item.href}
